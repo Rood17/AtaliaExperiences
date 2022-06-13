@@ -12,6 +12,20 @@
 <meta property="og:image" content="{% static 'core/coming_soon/img/logo.jpg' %}" />
 
 <link rel="stylesheet" href="{% static 'core/coming_soon/css/app.min.css'%}" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+<style>
+    h1, h2, h3 {
+        font-family: 'Roboto', sans-serif;
+    }
+    p{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+    }
+</style>
 </head>
 <body>
 <div class="animation anim-dark" data-aos="slide-effect-2">
@@ -41,7 +55,7 @@
 <p class="lead my-4" data-aos="fade" data-aos-delay="2500">Estamos preparando algo increible.</p>
 
 <span class="animation anim-light" data-aos="slide-effect-btn" data-aos-delay="3000">
-<a href="javascript:void(0);" class="btn btn-lg btn-outline" data-toggle="modal" data-target="#subscribeModal">¡Suscríbete Ahora!</a>
+<a href="javascript:void(0);" class="btn btn-lg btn-outline" data-toggle="modal" data-target="#subscribeModal">¡Suscríbete  Ahora!</a>
 </span>
 </div>
 
@@ -153,9 +167,9 @@
 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 <span aria-hidden="true"><i class="pe-7s-close pe-2x"></i></span>
 </button>
-<h2 class="modal-title" id="subscribeModalLabel">Suscribete</h2>
+<h2 class="modal-title" id="subscribeModalLabel">Suscríbete</h2>
 <p class="lead text-center text-light p-2">
-Suscribete para recibir nuestras notificaciones.
+    Suscríbete  para recibir nuestras notificaciones.
 </p>
 <form class="pr-4 pl-4 pb-4" id="subscribeform" action="php/subscribe.php" method="post">
 <div class="form-group md-form">
@@ -171,7 +185,7 @@ Suscribete para recibir nuestras notificaciones.
 <label class="">Email</label>
 </div>
 <div class="form-group text-center">
-<button type="submit" class="btn btn-lg btn-outline" id="js-subscribe-btn">Subscríbete Ahora</button>
+<button type="submit" class="btn btn-lg btn-outline" id="js-subscribe-btn">Suscríbete Ahora</button>
 <div id="js-subscribe-result" data-success-msg="Success, Please check your email." data-error-msg="Oops! Something went wrong"></div>
 </div>
 </form>
@@ -188,7 +202,7 @@ Suscribete para recibir nuestras notificaciones.
 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 <span aria-hidden="true"><i class="pe-7s-close pe-2x"></i></span>
 </button>
-<h2 class="modal-title" id="contactModalLabel">Contactacto</h2>
+<h2 class="modal-title" id="contactModalLabel">Contacto</h2>
 <p class="lead text-center text-light p-2">
 ¿Tienes alguna duda? ¿Quisieras saber más de nuestro proyecto? ¡Escríbenos!
 </p>
