@@ -1,0 +1,107 @@
+.parallax {
+  /* The image used */
+  background-image: url('/images/ni/paralax.jpeg');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax_2 {
+  /* The image used */
+  background-image: url('/images/ni/parallax_2.jpeg');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 800px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+.cta-box-wrap{height:2vw;}
+.list-marked-2 {padding: 0}
+.triangle-1{
+      padding: 0;
+    position: absolute;
+    width: 200px;
+    left: 0%;
+    width: 50%;
+    top: 150%;
+    height: 200px;
+    width: 50%;
+    background: url(https://goo.gl/BeSyyD);
+    clip-path: polygon(40% 0, 0 80%, 80% 80%);
+}
+.triangle-2{
+position: absolute;
+    top: 105%;
+  top:90%;
+  padding:0;
+    left: 15%;
+    width: 50%;
+    height: 150px;
+    background: url(https://goo.gl/BeSyyD);
+    clip-path: polygon(80% 0, 0 0%, 40% 107%);
+}
+.triangle-3{
+  padding: 0;
+    position: absolute;
+    width: 200px;
+    left: 30%;
+    padding:0;
+    width: 50%;
+    top: 150%;
+    height: 200px;
+    width: 50%;
+    background: url(https://goo.gl/BeSyyD);
+    clip-path: polygon(40% 0, 0 80%, 80% 80%);
+}
+.triangle-4{
+position: absolute;
+    top: 105%;
+  top:90%;
+  padding:0;
+    left: 45%;
+    width: 50%;
+    height: 150px;
+    background: url(https://goo.gl/BeSyyD);
+    clip-path: polygon(80% 0, 0 0%, 40% 107%);
+}
+.triangle-5{
+  padding: 0;
+    position: absolute;
+    width: 200px;
+    left: 60%;
+    padding:0;
+    width: 50%;
+    top: 150%;
+    height: 200px;
+    width: 50%;
+    background: url(https://goo.gl/BeSyyD);
+    clip-path: polygon(40% 0, 0 80%, 80% 80%);
+}
+.triangle-6{
+position: absolute;
+    top: 105%;
+  top:90%;
+  padding:0;
+    left: 75%;
+    width: 50%;
+    height: 150px;
+    background: url(https://goo.gl/BeSyyD);
+    clip-path: polygon(80% 0, 0 0%, 40% 107%);
+}

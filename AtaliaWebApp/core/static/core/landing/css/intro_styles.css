@@ -1,0 +1,170 @@
+@font-face {
+	font-family: 'Buongiorno_Rastellino';
+	src: url("../fonts/Buongiorno_Rastellino.otf");
+	font-weight: normal;
+	font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+#IntroVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%; 
+  height: 100%;
+    object-fit: fill;
+}
+#HeaderVideo {
+   position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%; 
+  height: 100%;
+    object-fit: fill;
+display: none;
+}
+
+.content_intro {
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.88);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+    max-width: 15%;
+    transition: margin 1s;
+}
+
+#introLogo {transition-timing-function: ease;}
+.content_intro_header {
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0.48);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+    max-width: 80%;
+    transition: margin 1s;
+    margin: 6% auto;
+}
+#introSubTxt {
+    display: none;
+    opacity: 0;
+    margin-top: 5%;
+    transition: all 1s ease;
+    position: absolute;
+    left: 35%;
+}
+#introSubTxt p {
+        font-size: 12rem;
+    font-family: Buongiorno_Rastellino;
+}
+.travel-advisor {
+    font-size: 12rem;
+    font-family: Buongiorno_Rastellino;
+    /*border-bottom: 1px solid #f5c47f;*/
+    
+}
+#introSubTxt h7 {
+        font-size: 1.5rem;
+    font-family: revert;
+    margin-top: -2px;
+    top: 80%;
+    width: 100%;
+    left: 0%;
+    position: absolute;
+    color: #61554c;
+    border-top: 1px solid #c4a780;
+}
+.slogan {
+    font-size: 1.6rem;
+    font-family: revert;
+    top: -50px;
+    position: relative;
+    color: #f5c47f;
+    visibility: hidden;
+}
+#introContinueBtn {
+    display: none;
+}
+#introLogo img {
+        padding: 10%;
+}
+.content_intro_footer{
+    background: #d2ad79;
+    margin: auto;
+    width: 100%;
+    /* text-align: center; */
+    position: absolute;
+}
+.content img {
+    max-width: 100%;
+    margin-top: 15%;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+.intro-footer-title h5 {
+    padding: 4%;
+    color:white;
+}
+.btn-intro {
+    margin: 3%;
+    color: white;
+    border-color: white;
+}
+
+.swiper-slider-corporate h6 {
+    letter-spacing: .050em;
+    color: #7fa71a;
+    font-weight: 500;
+    font-size: 16px;
+}
+.font-weight-light {
+  color:black;
+}
+
+#headerOceanVideo {
+    position: absolute;
+    width: 78%;
+    left: 139px;
+    top: 0;
+    display: none;
+}
+
+#logoHeader img {
+    width: 65%;
+    padding: 12% 0 0;
+}
+
+/** experiencias **/
+#sectionChange {
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif, Arial, sans-serif;
+    border-top: 1px solid #162e44;
+    color:#01b3a7;
+}
+
+.experiencias-other {
+    margin: 17% 0 0; 
+}
+.experiencias-other a , .experiencias-other span{
+    font-size: 1.1rem;
+    color:#01b3a7;
+}
+.experiencias-other a {
+    color:#162e44;
+}
+.experiencias-other a:hover {
+    color:#01b3a7;
+}
+
+.comments-container {
+    margin: 10% auto;
+}
+.contacto-n {
+    width: 100vw!important;
+}
