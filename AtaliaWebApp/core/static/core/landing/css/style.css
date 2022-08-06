@@ -113,6 +113,7 @@ body {
 	background-color: #ffffff;
 	-webkit-text-size-adjust: none;
 	-webkit-font-smoothing: subpixel-antialiased;
+	overflow: hidden;
 }
 
 h1, h2, h3, h4, h5, h6, [class*='heading-'] {
@@ -12814,7 +12815,7 @@ html [class*='section-'].section-top-0 {
 * Background Image
 */
 [class*='bg-'] {
-	background-size: cover;
+	background-size: contain;
 	background-position: center center;
 }
 
@@ -22913,7 +22914,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 	left: 50%;
 	bottom: 0;
 	min-width: 101%;
-	max-width: none;
+	max-width: 100%;
 	min-height: 101%;
 	transform: translate3d(-50%, 0, 0);
 }

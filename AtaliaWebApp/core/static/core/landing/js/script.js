@@ -156,7 +156,7 @@
 			pageTransition({
 				target: document.querySelector( '.page' ),
 				delay: 0,
-				duration: 500,
+				duration: 600,
 				classIn: 'fadeIn',
 				classOut: 'fadeOut',
 				classActive: 'animated',
@@ -169,7 +169,11 @@
 					}, options.duration * .75 );
 				},
 				onReady: function () {
-					plugins.preloader.addClass('loaded');
+					console.log(' *** / ?? *** ' + AutoHReady)
+					if (AutoHReady) {
+						plugins.preloader.addClass('loaded')
+						console.log(' *** / 2 / *** ' + AutoHReady)
+					}
 					windowReady = true;
 				}
 			});
@@ -198,7 +202,15 @@
 					}, options.duration * .75);
 				},
 				onReady: function () {
-					plugins.preloader.addClass('loaded');
+					// Combo INIT from handler
+					console.log(' *** / ? *** ' + AutoHReady)
+					if (AutoHReady) {
+						//plugins.preloader.addClass('loaded')
+						console.log(' *** / 2 / *** ' + AutoHReady)
+						plugins.preloader.addClass('loaded');
+					}
+					
+					
 					windowReady = true;
 				}
 			});

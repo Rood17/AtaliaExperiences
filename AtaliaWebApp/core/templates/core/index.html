@@ -50,7 +50,7 @@
       <p>Loading...</p>
     </div>
   </div>
-  <div class="page" onscroll="onScrollHandler()">
+  <div id="pageMaster" class="page" onscroll="onScrollHandler()">
 
     <!-- INTRO -->
     <section id="intro">
@@ -78,14 +78,14 @@
         <div class="col-md-6 intro-footer-title">
           <h5>ATALIA | <span style="font-size: 12px;"> Destination Experiences</span></h5>
         </div>
-        <div id="introSkipBtn" class="col-md-6">
+        <div id="introContinueBtn" class="col-md-6">
           <button class="button button-black-outline button-md btn-intro" onclick="transformIntro()">
             Saltar Intro
           </button>
         </div>
-        <div id="introContinueBtn" class="col-md-6">
+        <div id="introSkipBtn"  class="col-md-6">
           <button class="button button-black-outline button-md btn-intro" onclick="activateSlider(true)">
-            Continuar
+            Saltar Intro
           </button>
         </div>
       </div>
@@ -264,37 +264,37 @@
               <div class="row justify-content-center">
                 <div class="triangle-1 col-md-4 wow fadeInDown col-9" data-wow-delay=".2s" onmouseover="javascript:onSectionHover('Navega');">
                   <ul class="list-marked-2 box-categories-list">
-                    <li><a href="single-tour.html"><img src="{% static 'core/landing/images/ni/intro_sail.jpeg' %}" alt="" width="368" height="420" /></a>
+                    <li><a href="single-tour.html"><img src="{% static 'core/landing/images/ni/selected/tring/intro_sail.jpeg' %}" alt="" width="368" height="420" /></a>
                     </li>
                   </ul>
                 </div>
                 <div class="triangle-2 col-md-4 wow fadeInDown col-9" data-wow-delay=".2s" onmouseover="javascript:onSectionHover('Vuela');">
                   <ul class="list-marked-2 box-categories-list">
-                    <li><a href="single-tour.html"><img src="{% static 'core/landing/images/ni/intro_fly.jpeg' %}" alt="" width="368" height="420" /></a>
+                    <li><a href="single-tour.html"><img src="{% static 'core/landing/images/ni/selected/tring/intro_fly.jpeg' %}" alt="" width="368" height="420" /></a>
                     </li>
                   </ul>
                 </div>
                 <div class="triangle-3 col-md-4 wow fadeInDown col-9" data-wow-delay=".2s" onmouseover="javascript:onSectionHover('Explora');">
                   <ul class="list-marked-2 box-categories-list">
-                    <li><a href="single-tour.html"><img src="{% static 'core/landing/images/ni/intro_travel.jpeg' %}" alt="" width="368" height="420" /></a>
+                    <li><a href="single-tour.html"><img src="{% static 'core/landing/images/ni/selected/tring/intro_travel.jpeg' %}" alt="" width="368" height="420" /></a>
                     </li>
                   </ul>
                 </div>
                 <div class="triangle-4 col-md-4 wow fadeInDown col-9" data-wow-delay=".2s" onmouseover="javascript:onSectionHover('Degusta');">
                   <ul class="list-marked-2 box-categories-list">
-                    <li><a href="single-tour.html"><img src="{% static 'core/landing/images/ni/intro_food.jpeg' %}" alt="" width="368" height="420" /></a>
+                    <li><a href="single-tour.html"><img src="{% static 'core/landing/images/ni/selected/tring/intro_food.jpeg' %}" alt="" width="368" height="420" /></a>
                     </li>
                   </ul>
                 </div>
                 <div class="triangle-5 col-md-4 wow fadeInDown col-9" data-wow-delay=".2s" onmouseover="javascript:onSectionHover('Diviértete');">
                   <ul class="list-marked-2 box-categories-list">
-                    <li><a href="single-tour.html"><img src="{% static 'core/landing/images/ni/intro_fun.jpeg' %}" alt="" width="368" height="420" /></a>
+                    <li><a href="single-tour.html"><img src="{% static 'core/landing/images/ni/selected/tring/intro_fun.jpeg' %}" alt="" width="368" height="420" /></a>
                     </li>
                   </ul>
                 </div>
                 <div class="triangle-6 col-md-4 wow fadeInDown col-9" data-wow-delay=".2s" onmouseover="javascript:onSectionHover('Descansa');">
                   <ul class="list-marked-2 box-categories-list">
-                    <li><a href="single-tour.html"><img src="{% static 'core/landing/images/ni/intro_descansa.jpeg' %}" alt="" width="368" height="420" /></a>
+                    <li><a href="single-tour.html"><img src="{% static 'core/landing/images/ni/selected/tring/intro_descansa.jpeg' %}" alt="" width="368" height="420" /></a>
                     </li>
                   </ul>
                 </div>
@@ -616,7 +616,7 @@
           <div class="row row-30 justify-content-center" data-lightgallery="group">
             <div class="col-md-6 col-lg-5 col-xl-4 col-8">
               <!-- Thumbnail-info-->
-              <article class="thumbnail-info"><img src="{% static 'core/landing/images/thumnails-info-1-370x303.jpg' %}" alt="" width="370" height="303" />
+              <article class="thumbnail-info"><img src="{% static 'core/landing/images/post-10-370x307.jpg' %}" alt="" width="370" height="303" />
                 <div class="thumbnail-info-figure">
                   <div class="counter-classic">
                     <div class="counter-classic-number"><span class="counter">32+</span>
@@ -628,7 +628,7 @@
             </div>
             <div class="col-md-6 col-lg-5 col-xl-4 col-8">
               <!-- Thumbnail-info-->
-              <article class="thumbnail-info"><img src="{% static 'core/landing/images/thumnails-info-1-370x303.jpg' %}" alt="" width="370" height="303" />
+              <article class="thumbnail-info"><img src="{% static 'core/landing/images/post-10-370x307.jpg' %}" alt="" width="370" height="303" />
                 <div class="thumbnail-info-figure">
                   <div class="counter-classic">
                     <div class="counter-classic-number"><span class="counter">500</span><span class="symbol">+</span>
@@ -640,7 +640,7 @@
             </div>
             <div class="col-md-6 col-lg-5 col-xl-4 col-8">
               <!-- Thumbnail-info-->
-              <article class="thumbnail-info"><img src="{% static 'core/landing/images/thumnails-info-1-370x303.jpg' %}" alt="" width="370" height="303" />
+              <article class="thumbnail-info"><img src="{% static 'core/landing/images/post-10-370x307.jpg' %}" alt="" width="370" height="303" />
                 <div class="thumbnail-info-figure">
                   <div class="counter-classic">
                     <div class="counter-classic-number"><span class="counter">1000</span>

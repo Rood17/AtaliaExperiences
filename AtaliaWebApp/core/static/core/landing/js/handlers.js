@@ -20,6 +20,8 @@ const headerOceanVideo = document.getElementById("headerOceanVideo")
 const introFooterHeight = 70;
 const px = 'px';
 
+let AutoHReady = false;
+
 window.addEventListener('scroll',(event) => {
     console.log('Scrolling... : '+ window.window.scrollY);
     if (window.window.scrollY == 0){
@@ -36,8 +38,12 @@ window.onload= function () {
     console.log("Init Atalia System")
     setOverflowHidden(true)
     setElementDisplay(AllSections, false)
+    
     setAutoHeight(intro)
-    setIntroFooter()
+    
+    
+    // liberate pageXOffset
+    pageMaster.style.display = 'block';
     
     // set elements
     centerElementByMargin(introLogo);
@@ -86,20 +92,20 @@ function activateAllSections(flag){
 
 function transformIntro() {
     
-    introContinueBtn.style.display = 'block';
+    //introContinueBtn.style.display = 'block';
     
     // video
     IntroVideo.style.display = 'none';
-    HeaderVideo.style.display = 'block';
+    //HeaderVideo.style.display = 'block';
     
-    introLogo.style.marginLeft = '15%';
+    //introLogo.style.marginLeft = '15%';
     
     // elements
-    introSubTxt.style.display = 'block';
+    //introSubTxt.style.display = 'block';
     
     introSkipBtn.style.display = 'none';
-    introSubTxt.style.opacity = 1;
-
+    //introSubTxt.style.opacity = 1;
+    activateSlider(true)
 }
 
 window.onbeforeunload = function() {
