@@ -87,8 +87,8 @@ $('.slideshow-text').slick({
 
 // stariting slider
 function sliderHandlerPrev () {
-    activateIntro(true)
-    activateSlider(false)
+    activateIntro(false)
+    //activateSlider(true)
     
 
 }

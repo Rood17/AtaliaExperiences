@@ -23,6 +23,11 @@
 display: none;
 }
 
+/** quit intro **/
+#intro {
+    display: none;
+}
+
 .content_intro {
 /* From https://css.glass */
 background: rgba(255, 255, 255, 0.88);

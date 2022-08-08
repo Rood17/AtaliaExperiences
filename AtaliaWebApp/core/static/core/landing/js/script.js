@@ -174,6 +174,8 @@
 						plugins.preloader.addClass('loaded')
 						console.log(' *** / 2 / *** ' + AutoHReady)
 					}
+					// fix
+					$(".preloader").addClass('loaded');
 					windowReady = true;
 				}
 			});
@@ -209,6 +211,7 @@
 						console.log(' *** / 2 / *** ' + AutoHReady)
 						plugins.preloader.addClass('loaded');
 					}
+					$(".preloader").addClass('loaded');
 					
 					
 					windowReady = true;

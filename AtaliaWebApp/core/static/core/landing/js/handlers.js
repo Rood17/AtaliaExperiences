@@ -36,10 +36,12 @@ window.addEventListener('scroll',(event) => {
 // INIT
 window.onload= function () {
     console.log("Init Atalia System")
+    activateSlider(true)
     setOverflowHidden(true)
     setElementDisplay(AllSections, false)
+    setElementDisplay(intro, false)
     
-    setAutoHeight(intro)
+    //setAutoHeight(intro)
     
     
     // liberate pageXOffset
