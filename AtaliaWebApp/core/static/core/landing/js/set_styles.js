@@ -3,8 +3,10 @@ async function setAutoHeight(element){
     
     element.style.height = windowsHeight + px;
     var isREADY = await setIntroFooter().then((response) => {
+        
         if (response) $(".preloader").addClass('loaded');
     })
+    
     console.log("estamos ajustando height : " + windowsHeight)
 }
 
@@ -21,9 +23,9 @@ function setElementDisplay (element, flag){
 async function  setIntroFooter (){
     var ih = introFooter.style.height = introFooterHeight + px;
     infHeight = windowsHeight - introFooterHeight;
-    console.log("infHeight : " + infHeight)
-    console.log("introFooter : " + introFooter)
     introFooter.style.top = infHeight + px;
+    introFooter.style.display = 'none';
+    
     return  true;
 }
 
