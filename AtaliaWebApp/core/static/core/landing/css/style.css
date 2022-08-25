@@ -9009,15 +9009,15 @@ textarea.textarea-lg {
 }
 
 .footer-corporate-inset .post-minimal-2 a {
-	color: #01b3a7;
+	color: white;
 }
 
 .footer-corporate-inset .post-minimal-2 a:hover {
-	color: #50ba87;
+	color: grey;
 }
 
 .footer-corporate-inset .list-marked li:before {
-	background: #01b3a7;
+	background: #1a4856;
 }
 
 /**
@@ -12700,7 +12700,7 @@ html [class*='section-'].section-top-0 {
 }
 
 .context-dark .post-minimal-2-time, .bg-gray-dark .post-minimal-2-time, .bg-primary .post-minimal-2-time {
-	color: rgba(255, 255, 255, 0.25);
+	color:  rgb(26 72 86);
 }
 
 .context-dark .text-strike-1, .bg-gray-dark .text-strike-1, .bg-primary .text-strike-1 {
