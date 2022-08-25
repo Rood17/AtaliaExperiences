@@ -4,6 +4,30 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'MaterialIcons-Regular';
+	src: url("../fonts/MaterialIcons-Regular.wolf2");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'HelveticaNeue';
+	src: url("../fonts/HelveticaNeue.tff");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'klavika-light';
+	src: url("../fonts/klavika-light.otf");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'FontsFree-Net-Billabong';
+	src: url("../fonts/FontsFree-Net-Billabong.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 #IntroVideo {
   position: fixed;
@@ -12,6 +36,22 @@
   width: 100%; 
   height: 100%;
     object-fit: fill;
+}
+
+.logo-loader {
+    margin: 5% auto;
+}
+#AllSections {
+    display:none;
+}
+.slogan-head{
+    font-size: 4rem;
+    color: black;
+    font-family: Buongiorno_Rastellino;
+    text-align: start;
+    position: absolute;
+    top: -23px;
+    left: -67px;
 }
 #HeaderVideo {
    position: fixed;
@@ -38,20 +78,35 @@ backdrop-filter: blur(5px);
 border: 1px solid rgba(255, 255, 255, 0.3);
     max-width: 15%;
     transition: margin 1s;
+    padding: 2%;
 }
 
 #introLogo {transition-timing-function: ease;}
 .content_intro_header {
 /* From https://css.glass */
-background: rgba(255, 255, 255, 0.48);
+background: rgba(255, 255, 255, 0.58);
 border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(5px);
 -webkit-backdrop-filter: blur(5px);
 border: 1px solid rgba(255, 255, 255, 0.3);
-    max-width: 80%;
+    max-width: 70%;
     transition: margin 1s;
     margin: 6% auto;
+}
+.content_intro_header_loading{
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.58);
+    border-radius: 16px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+        max-width: 70%;
+        transition: margin 1s;
+        margin: 6% auto;
+    }
+#logoHeader {
+    max-width: 60%!important; 
 }
 #introSubTxt {
     display: none;
@@ -107,7 +162,12 @@ border: 1px solid rgba(255, 255, 255, 0.3);
     max-width: 100%;
     margin-top: 15%;
 }
-
+.header-links {
+    position: absolute;
+    top:7%;
+    width: 100%;
+    color:white;
+}
 #myBtn:hover {
   background: #ddd;
   color: black;
@@ -134,17 +194,39 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 
 #headerOceanVideo {
     position: absolute;
-    width: 78%;
-    left: 139px;
+    width: 100%;
+    left: 0px;
     top: 0;
-    display: none;
+    visibility:visible;
+    opacity: 0;
+    transition: visibility 0s ease-in 0s, opacity 3s;
+}
+.links-hover{
+    transition: width 3 s ease-in 0s, opacity 3s;
+}
+.links-hover:hover {
+    width: 85%;
 }
 
 #logoHeader img {
     width: 65%;
-    padding: 12% 0 0;
+    padding: 10% 0 0;
+}
+.logo-l-header {
+    margin-top: -6%;
+    text-align: start;
+}
+.welcome-txt {
+    width: 100%;
+    margin:3%;
 }
 
+#introSkipBtnSlider {
+    position: absolute;
+    z-index: 1000;
+    bottom: 86%;
+    width: 100%;
+}
 /** experiencias **/
 #sectionChange {
     font-size: 2rem;
@@ -172,4 +254,54 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .contacto-n {
     width: 100vw!important;
+}
+
+.carousel-item {
+    width: 100%!important;
+    height:20vw;
+}
+.cta-box-wrap {
+    width: 100%!important;
+}
+
+
+/** CONTACT **/
+.content-contact {
+    background: rgb(1 179 167 / 39%);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    max-width: 40%;
+    transition: margin 1s;
+    margin: 6% auto;
+    padding: 3% 0%;
+}
+.redes-container a {
+    font-size: 1.5rem;
+    color: white;
+}
+.redes-container i {
+    color: #ffffff94!important;
+}
+.redes-msn {
+    font-family: klavika-light;
+
+}
+.redes-whats {
+    font-family: HelveticaNeue;
+
+}
+.redes-insta {
+    font-family: FontsFree-Net-Billabong;
+
+}
+.link-hover-font:hover {
+    font-size: 1.3rem;
+}
+.redes-card {
+    border-bottom: 1px solid #ffffff;
+    margin: 0% 0 4% 0%;
+    padding-bottom: 5%;
 }

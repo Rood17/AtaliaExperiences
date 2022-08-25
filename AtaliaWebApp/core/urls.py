@@ -6,5 +6,6 @@ urlpatterns = [
 
     # Core View
     path('', core_views.index, name="index"),
+    path('prueba', core_views.prueba, name="prueba"),
     
 ]

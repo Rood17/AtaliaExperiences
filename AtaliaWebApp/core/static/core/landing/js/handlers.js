@@ -11,12 +11,13 @@ const HeaderVideo = document.getElementById("HeaderVideo");
 const IntroVideo = document.getElementById("IntroVideo");
 const introSubTxt = document.getElementById("introSubTxt");
 const introContinueBtn = document.getElementById("introContinueBtn");
-const introSkipBtn = document.getElementById("introSkipBtn");
+const introSkipBtn = document.getElementById("introSkipBtnSlider");
 const introLogo = document.getElementById("introLogo");
 const sectionChange = document.getElementById("sectionChange")
 const introVideoSrc = document.getElementById("introVideoSrc")
-const headerOceanVideo = document.getElementById("headerOceanVideo")
-
+const headerOceanVideo = document.getElementById("headerOceanVideo");
+const header = document.getElementById("header");
+const logoHeader = document.getElementById("logoHeader");
 const introFooterHeight = 70;
 const px = 'px';
 
@@ -36,12 +37,14 @@ window.addEventListener('scroll',(event) => {
 // INIT
 window.onload= function () {
     console.log("Init Atalia System")
-    activateSlider(true)
+    //activateSlider(true)
     setOverflowHidden(true)
     setElementDisplay(AllSections, false)
-    setElementDisplay(intro, false)
+    //setElementDisplay(intro, false)
     
-    //setAutoHeight(intro)
+    setAutoHeight(header, true)
+    setAutoHeight(headerOceanVideo)
+
     
     
     // liberate pageXOffset
@@ -52,7 +55,8 @@ window.onload= function () {
     centerVerticalElem(introLogo);
     
     // headerOceanVideo
-
+    //loadDoc()
+    autoType()
 }
 
 function setOverflowHidden( flag ){
@@ -76,15 +80,23 @@ function activateSlider(flag) {
     if (flag) {
         IndexSlider.classList.toggle("m-fadeIn");
         activateAllSections(false)
+        introSkipBtn.style.display="block";
     } else {
-        IndexSlider.classList.remove( "m-fadeIn" )
+        IndexSlider.classList.toggle( "m-fadeOut" );
+        introSkipBtn.style.display="none";
+        setTimeout(function(){
+            IndexSlider.style.display = 'none';
+        }, 1000);
+        setTimeout(function(){
+            headerOceanVideo.classList.toggle("m-fadeIn");
+        }, 1000);
     }
 } 
 function activateAllSections(flag){
     if (flag){
         AllSections.style.display = 'block';
         AllSections.classList.toggle("m-fadeIn");
-        video_header()
+        
     } else {
         AllSections.classList.remove("m-fadeIn");
         AllSections.style.display = 'none';
@@ -107,7 +119,7 @@ function transformIntro() {
     
     introSkipBtn.style.display = 'none';
     //introSubTxt.style.opacity = 1;
-    activateSlider(true)
+    //activateSlider(true)
 }
 
 window.onbeforeunload = function() {
@@ -117,6 +129,16 @@ window.onbeforeunload = function() {
 function onSectionHover(sectionName) {
   sectionChange.innerHTML  = sectionName
 }
+
+function loadDoc() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+    xhttp.open("GET", "/prueba");
+    xhttp.send();
+  }
 
 
 

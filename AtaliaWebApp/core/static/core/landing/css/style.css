@@ -8745,7 +8745,7 @@ textarea.textarea-lg {
 
 .footer-corporate {
 	text-align: center;
-	background: #162e44;
+	background: #01b3a7c4;
 }
 
 .footer-corporate h6 {
@@ -12601,7 +12601,7 @@ html [class*='section-'].section-top-0 {
 }
 
 .context-dark .footer-contacts .icon, .bg-gray-dark .footer-contacts .icon, .bg-primary .footer-contacts .icon {
-	color: #01b3a7;
+	color: #11263ac9	;
 }
 
 .context-dark .footer-contacts p, .bg-gray-dark .footer-contacts p, .bg-primary .footer-contacts p {
@@ -24779,5 +24779,8 @@ img.mfp-img {
 }
 
 .sections-container{
-  margin: 5%;
+  margin: 0 5% 5%;
+}
+.post-minimal-2-title a {
+	color :#1a4856;
 }

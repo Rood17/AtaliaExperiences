@@ -44,6 +44,11 @@
   <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="{% static 'core/landing/images/ie8-panel/warning_bar_0000_us.jpg' %}" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
   <div class="preloader">
     <div class="preloader-body">
+      <div class="content_intro_header_loading">
+        <div class="logo-loader">
+          <img style="max-width: 35%;" src="{% static 'core/landing/images/logos/logo_trans.png' %}" />
+        </div>
+      </div>
       <div class="cssload-container">
         <div class="cssload-speeding-wheel"></div>
       </div>
@@ -69,8 +74,6 @@
             <img src="{% static 'core/landing/images/logos/logo_trans.png' %}" />
           </div>
           <div id="introSubTxt" class="content_intro_subtext col-md-7">
-            <p>Travel Advisor</p>
-            <h7>Find the Bests Experiences</h7>
           </div>
         </div>
       </div>
@@ -93,10 +96,18 @@
     <!-- END INTRO -->
 
     <!-- Page IndexSlider-->
+    <div id="introSkipBtnSlider" class="col-md-6">
+      <button class="button button-black-outline button-md btn-intro" onclick="sliderHandlerNext()">
+        Saltar Intro
+      </button>
+    </div>
     <section id="IndexSlider">
       <div class="split-slideshow">
         <div class="slideshow">
           <div class="slider">
+            <div class="item">
+              <img src="{% static 'core/landing/images/ni/intro_atalia.jpg' %}" />
+            </div>
             <div class="item">
               <img src="{% static 'core/landing/images/ni/intro_sail.jpeg' %}" />
             </div>
@@ -104,13 +115,13 @@
               <img src="{% static 'core/landing//images/ni/selected/resp_md/intro_fly.jpeg' %}" />
             </div>
             <div class="item">
-              <img src="{% static 'core/landing/images/ni/intro_sail.jpeg' %}" />
+              <img src="{% static 'core/landing/images/ni/explore.jpeg' %}" />
             </div>
             <div class="item">
-              <img src="{% static 'core/landing/images/ni/intro_sail.jpeg' %}" />
+              <img src="{% static 'core/landing/images/ni/eat.jpeg' %}" />
             </div>
             <div class="item">
-              <img src="{% static 'core/landing//images/ni/selected//resp_md/intro_fun.jpeg' %}" />
+              <img src="{% static 'core/landing//images/ni/fun.jpeg' %}" />
             </div>
             <div class="item">
               <img src="{% static 'core/landing//images/ni/selected/intro_descansa.jpeg' %}" />
@@ -118,6 +129,7 @@
           </div>
         </div>
         <div class="slideshow-text">
+          <div class="item">.</div>
           <div class="item">Navega</div>
           <div class="item">Vuela</div>
           <div class="item">Explora</div>
@@ -132,24 +144,41 @@
     <!-- AllSections -->
     <!-- Section Box Categories-->
     <section id="AllSections">
-      <header class="section page-header">
+      <header id="header" class="section page-header">
         <!-- RD Navbar-->
-        <img id="headerOceanVideo" src="{% static 'core/landing/images/bck/fondo_header.jpg' %}" />
+        <img id="headerOceanVideo" src="{% static 'core/landing/images/ni/paralax.jpeg' %}" />
         <div class="rd-navbar-aside-outer">
           <!--video autoplay muted id="welcomeVideo" onended="">
           <source id="" src="/intro_videos/linear-1.mp4" type="video/mp4">
           Your browser does not support HTML5 video.
         </video-->
           <div id="logoHeader" class="content_intro_header row">
-            <div class="col-md-4">
-              <img src="{% static 'core/landing/images/logos/logo_trans.png' %}" />
+            <div class=" col-md-4">
+              <img src="{% static 'core/landing/images/logos/logo_trans_1.png' %}" />
             </div>
-            <div id="" class=" content_intro_subtext col-md-8">
-              <p class="travel-advisor">Travel Advisor</p>
-              <h7 class="slogan">Find the Bests Experiences</h7>
+            <div id="" class="logo-l-header content_intro_subtext col-md-8">
+              <img src="{% static 'core/landing/images/logos/logo_trans_2.png' %}" />
+            </div>
+
+            <div class="welcome-txt row">
+              <div class="col-md-6">
+                {% include 'core/components/auto_type.html' %}
+              </div>
+              <div class="col-md-6">
+                <p class="slogan-head">Travel Adviser</p>
+              </div>
             </div>
           </div>
-
+          <div class="header-links row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4 row">
+              <div class="col-md-4 "><a href="www.facebook.com" target="_blank"><img class="links-hover" src="{% static 'core/landing/images/redes/ni/Facebook_w.png' %}" /></a></div>
+              <div class="col-md-4"><a href="www.facebook.com" target="_blank"><img class="links-hover" src="{% static 'core/landing/images/redes/ni/Instagram_w.png' %}" /></a></div>
+              <div class="col-md-4 "><a href="www.facebook.com" target="_blank"><img class="links-hover" src="{% static 'core/landing/images/redes/ni/Pinterest_W.png' %}" /></a></div>
+            </div>
+            <div class="col-md-4"></div>
+          </div>
+          
         </div>
         <div class="rd-navbar-wrap">
           <nav id="navHead" class="rd-navbar rd-navbar-corporate" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="106px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
@@ -173,35 +202,18 @@
                         <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.html">Nosotros</a></li>
                       </ul>
                     </li>
-                    <li class="rd-nav-item rd-navbar--has-dropdown rd-navbar-submenu"><a class="rd-nav-link" href="#">Experiencias</a><span class="rd-navbar-submenu-toggle"></span>
-                      <!-- RD Navbar Dropdown-->
-                      <ul class="rd-menu rd-navbar-dropdown">
-                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="grid-gallery.html">Navega</a></li>
-                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="full-width-gallery.html">Vuela</a></li>
-                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="masonry-gallery.html">Explora</a></li>
-                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="full-width-masonry-gallery.html">Degusta</a></li>
-                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="full-width-masonry-gallery.html">Diviértete</a></li>
-                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="full-width-masonry-gallery.html">Descansa</a></li>
-                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="full-width-masonry-gallery.html">Traslados / Transporte</a></li>
-                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="full-width-masonry-gallery.html"> <span style="color:#01b3a7">PETICIONES ESPECIALES</span></a></li>
-                        <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="full-width-masonry-gallery.html">Celebra</a></li>
-                      </ul>
-                    </li>
-                    <li class="rd-nav-item rd-navbar--has-dropdown rd-navbar-submenu"><a class="rd-nav-link" href="our-tours.html">Tours</a><span class="rd-navbar-submenu-toggle"></span>
-                      <!-- RD Navbar Dropdown-->
+                    <!--li class="rd-nav-item rd-navbar--has-dropdown rd-navbar-submenu"><a class="rd-nav-link" href="our-tours.html">Tours</a><span class="rd-navbar-submenu-toggle"></span>
+                      <!-- RD Navbar Dropdown--
                       <ul class="rd-menu rd-navbar-dropdown rd-navbar-open-right">
                         <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="single-tour.html">Tours Culturales</a></li>
                         <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="single-tour.html">Tours Naturales</a></li>
                         <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="single-tour.html">Tours Aventura</a></li>
                       </ul>
-                    </li>
-
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="contact-us.html">CONTACTO</a>
-                    </li>
-                    <li class="rd-nav-item rd-navbar--has-megamenu rd-navbar-submenu"><a class="rd-nav-link" href="#">Sitio</a><span class="rd-navbar-submenu-toggle"></span>
+                    </li>-->
+                    <li class="rd-nav-item rd-navbar--has-megamenu rd-navbar-submenu"><a class="rd-nav-link" href="#">Experiencias</a><span class="rd-navbar-submenu-toggle"></span>
                       <!-- RD Navbar Megamenu-->
                       <ul class="rd-menu rd-navbar-megamenu rd-navbar-open-right">
-                        <li class="rd-megamenu-item">
+                        <!--li class="rd-megamenu-item">
                           <div>
                             <h5 class="rd-megamenu-title">Págs.</h5>
                             <ul class="rd-megamenu-list">
@@ -213,7 +225,7 @@
                               <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="coming-soon.html">Twitter</a></li>
                             </ul>
                           </div>
-                        </li>
+                        </li-->
                         <li class="rd-megamenu-item">
                           <div>
                             <h5 class="rd-megamenu-title">Experiencias</h5>
@@ -241,6 +253,9 @@
                         </li>
                       </ul>
                     </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="contact-us.html">CONTACTO</a>
+                    </li>
+                    
                   </ul>
                 </div>
               </div>
@@ -256,6 +271,7 @@
         <h1>Experiencias</h1>
         <p id="sectionChange">A tu Gusto</p>
       </div>
+
       <section class="section section-lg section-top-1 bg-gray-4">
 
         <div class="container offset-negative-1">
@@ -264,37 +280,37 @@
               <div class="row justify-content-center">
                 <div class="triangle-1 col-md-4 wow fadeInDown col-9" data-wow-delay=".2s" onmouseover="javascript:onSectionHover('Navega');">
                   <ul class="list-marked-2 box-categories-list">
-                    <li><a href="single-tour.html"><img src="{% static 'core/landing/images/ni/selected/tring/intro_sail.jpeg' %}" alt="" width="368" height="420" /></a>
+                    <li><a href="single-tour.html"><img src="{% static 'core/landing/images/ni/intro_sail.jpeg' %}" alt="" width="368" height="420" /></a>
                     </li>
                   </ul>
                 </div>
                 <div class="triangle-2 col-md-4 wow fadeInDown col-9" data-wow-delay=".2s" onmouseover="javascript:onSectionHover('Vuela');">
                   <ul class="list-marked-2 box-categories-list">
-                    <li><a href="single-tour.html"><img src="{% static 'core/landing/images/ni/selected/tring/intro_fly.jpeg' %}" alt="" width="368" height="420" /></a>
+                    <li><a href="single-tour.html"><img src="{% static 'core/landing//images/ni/selected/resp_md/intro_fly.jpeg' %}" alt="" width="368" height="420" /></a>
                     </li>
                   </ul>
                 </div>
                 <div class="triangle-3 col-md-4 wow fadeInDown col-9" data-wow-delay=".2s" onmouseover="javascript:onSectionHover('Explora');">
                   <ul class="list-marked-2 box-categories-list">
-                    <li><a href="single-tour.html"><img src="{% static 'core/landing/images/ni/selected/tring/intro_travel.jpeg' %}" alt="" width="368" height="420" /></a>
+                    <li><a href="single-tour.html"><img src="{% static 'core/landing/images/ni/explore.jpeg' %}" alt="" width="368" height="420" /></a>
                     </li>
                   </ul>
                 </div>
-                <div class="triangle-4 col-md-4 wow fadeInDown col-9" data-wow-delay=".2s" onmouseover="javascript:onSectionHover('Degusta');">
+                <div class="triangle-4 col-md-4 wow fadeInDown col-9" data-wow-delay=".2s" onmouseover="javascript:onSectionHover('Come & Bebe');">
                   <ul class="list-marked-2 box-categories-list">
-                    <li><a href="single-tour.html"><img src="{% static 'core/landing/images/ni/selected/tring/intro_food.jpeg' %}" alt="" width="368" height="420" /></a>
+                    <li><a href="single-tour.html"><img src="{% static 'core/landing/images/ni/eat.jpeg' %}" alt="" width="368" height="420" /></a>
                     </li>
                   </ul>
                 </div>
                 <div class="triangle-5 col-md-4 wow fadeInDown col-9" data-wow-delay=".2s" onmouseover="javascript:onSectionHover('Diviértete');">
                   <ul class="list-marked-2 box-categories-list">
-                    <li><a href="single-tour.html"><img src="{% static 'core/landing/images/ni/selected/tring/intro_fun.jpeg' %}" alt="" width="368" height="420" /></a>
+                    <li><a href="single-tour.html"><img src="{% static 'core/landing//images/ni/fun.jpeg' %}" alt="" width="368" height="420" /></a>
                     </li>
                   </ul>
                 </div>
                 <div class="triangle-6 col-md-4 wow fadeInDown col-9" data-wow-delay=".2s" onmouseover="javascript:onSectionHover('Descansa');">
                   <ul class="list-marked-2 box-categories-list">
-                    <li><a href="single-tour.html"><img src="{% static 'core/landing/images/ni/selected/tring/intro_descansa.jpeg' %}" alt="" width="368" height="420" /></a>
+                    <li><a href="single-tour.html"><img src="{% static 'core/landing//images/ni/selected/intro_descansa.jpeg' %}" alt="" width="368" height="420" /></a>
                     </li>
                   </ul>
                 </div>
@@ -316,11 +332,12 @@
       <section class="section section-sm section-first bg-default text-md-left">
         <div class="container">
           <div class="row row-50 align-items-center justify-content-center justify-content-xl-between">
-            <div class="col-lg-6 text-center wow fadeInUp"><img src="{% static 'core/landing/images/ni/intro_fun2.jpeg' %}" alt="" width="556" height="382" />
+            <div class="col-lg-6 text-center wow fadeInUp">
+              <img src="{% static 'core/landing/images/ni/intro_travel.jpeg' %}" alt="" width="556" height="382" />
             </div>
             <div class="col-lg-6 wow fadeInRight" data-wow-delay=".1s">
               <div class="box-width-lg-470">
-                <h3>Descubre Nuevos Horizontes</h3>
+                <h3>¿QUÉ HACEMOS?</h3>
                 <!-- Bootstrap tabs-->
                 <div class="tabs-custom tabs-horizontal tabs-line tabs-line-big tabs-line-style-2 text-center text-md-left" id="tabs-7">
                   <!-- Nav tabs-->
@@ -332,16 +349,19 @@
                   <!-- Tab panes-->
                   <div class="tab-content">
                     <div class="tab-pane fade show active" id="tabs-7-1">
-                      <p>Toma un avión y ¡piérdete!... nosotras nos encargamos del resto. Somos almas inquietas, buscando el próximo viaje, sitios nuevos por conocer y la siguiente aventura. Dinos quién eres y qué te apasiona, y nos encantará diseñar tu experiencia hecha a la medida.</p>
-                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Read More</a></div>
+                      <p>Toma un avión y piérdete!... nosotras nos encargamos del resto.
+                        Somos almas inquietas, buscando el próximo viaje, sitios nuevos por conocer y la siguiente aventura.
+                        Dinos quien eres y que te apasiona y nos encantará diseñar tu experiencia hecha a la medida.</p>
+                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Escríbenos</a><a class="button button-black-outline button-md" href="about.html">Saber Más</a></div>
                     </div>
                     <div class="tab-pane fade" id="tabs-7-2">
-                      <p>Somos una empresa empeñada en contribuir a la conservación de las bellezas naturales y nos solidarizamos con los que más lo necesitan.</p>
-                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Read More</a></div>
+                      <p>Ser tu mejor aliado en la creación de experiencias de viaje hechas a tu medida.</p>
+                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Escríbenos</a><a class="button button-black-outline button-md" href="about.html">Saber Más</a></div>
                     </div>
                     <div class="tab-pane fade" id="tabs-7-3">
-                      <p>Nuestra misión es proporcionar la mejor experiencia de planificación de viajes y, al mismo tiempo, convertirnos en una ventanilla única para todos los servicios de viaje disponibles en la industria.</p>
-                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Read More</a></div>
+                      <p>Cumplir los planes y sueños de viajeros de todo el mundo, contribuyendo siempre a la conservación de las
+                        bellezas naturales y solidarizarnos con los que más lo necesitan.</p>
+                      <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Escríbenos</a><a class="button button-black-outline button-md" href="about.html">Saber Más</a></div>
                     </div>
                   </div>
                 </div>
@@ -522,11 +542,11 @@
       </section-->
       <!-- Section Subscribe-->
       <section class="section bg-default text-center offset-top-50">
-        <div class="parallax-container parallax" data-parallax-img="{% static 'core/landing/images/ni/paralax.jpeg' %}">
+        <div class="parallax-container parallax" data-parallax-img="{% static 'core/landing/images/ni/banner_sail_2.jpeg' %}">
           <div class="parallax-content section-xl section-inset-custom-1 context-dark bg-overlay-2-21">
             <div class="container">
-              <h2 class="heading-2 oh font-weight-normal wow slideInDown"><span class="d-block font-weight-sbold">¡Las mejores experiencias</span><span class="d-block font-weight-light">están esperándote!</span></h2>
-              <p class="text-width-medium text-spacing-75 wow fadeInLeft" data-wow-delay=".1s">Te proporcionamos experiencias únicas creando momentos memorables.</p><a class="button button-secondary button-pipaluk" href="#">¡Reserva ahora!</a>
+              <h2 class="heading-2 oh font-weight-normal wow slideInDown"><span class="d-block font-weight-sbold">¡Las mejores experiencias</span><span class="d-block">te esperan!</span></h2>
+              <a class="button button-secondary button-pipaluk" href="#">¡Reserva ahora!</a>
             </div>
           </div>
         </div>
@@ -546,10 +566,14 @@
                     <div class="quote-nancy-quote">
                       <h4 class="q">¡Un magnífico trabajo!</h4>
                     </div>
-                    <p class="quote-nancy-text">Me casé en 2017 y la organización fue de 10, personalizado, contestaba al momento, tenía opciones para mi, se adecuada a lo que yo quería como wedding planner, en ningún momento sentí que mi boda no estaba siendo adecuadamente planificada, eso es muy importante.. y el día de la boda todo salió como debía salir aunque hubo cosas que no me enteré que surgieron pero las resolvió y yo me la pasé relajada el día de mi boda. Altamente recomendado. Mi familia es mexicana y la familia política española así que se adaptó todo muy bien a las dos culturas. Yo vivo en España y se planificó todo con la wedding planear en méxico.</p>
+                    <p class="quote-nancy-text">
+                      Me casé en 2017 y la organización fue de 10, personalizado, 
+                      contestaba al momento, tenía opciones para mi, se adecuada a 
+                      lo que yo quería como wedding planner, en ningún momento sentí 
+                      que mi boda no estaba siendo adecuadamente planificada, eso es 
+                      muy importante..Yo vivo en España y 
+                         se planificó todo con la wedding planear en méxico.</p>
                     <div class="unit unit-spacing-sm align-items-center">
-                      <div class="unit-left"><img class="img-circles" src="{% static 'core/landing/images/user-2-118x118.jpg' %}" alt="" width="87" height="87">
-                      </div>
                       <div class="unit-body">
                         <h5 class="quote-nancy-cite">Alejandro Toro</h5>
                         <p class="quote-nancy-status"></p>
@@ -572,8 +596,6 @@
                     <p class="quote-nancy-text">Te ayuda a orientarte y te centra en el objetivo de lograr una hermosa boda siempre poniendo en cuenta que debes de tener todo planeado y organizado para que disfrutes ese día al máximo
                       Me encantó mil gracias por tu orientación ya empecé a organizarme siguiendo los cuentos clave y los tipos que me proporcionaste.</p>
                     <div class="unit unit-spacing-sm align-items-center">
-                      <div class="unit-left"><img class="img-circles" src="{% static 'core/landing/images/user-1-118x118.jpg' %}" alt="" width="87" height="87">
-                      </div>
                       <div class="unit-body">
                         <h5 class="quote-nancy-cite">Paulina Duarte</h5>
                         <p class="quote-nancy-status"></p>
@@ -595,8 +617,6 @@
                     </div>
                     <p class="quote-nancy-text">Atalia me ha ayudado un par de veces a planear mi viaje y estoy más que contento, ya sea que vayas a descansar, de tour, de fiesta o cualquiera que sea tu plan te ayudarán a encontrar los lugares más adecuados para ello, además te darán opciones para ajustar tus actividades a tu presupuesto, la atención es de primera y la comunicación muy buena, 100% recomendados.</p>
                     <div class="unit unit-spacing-sm align-items-center">
-                      <div class="unit-left"><img class="img-circles" src="{% static 'core/landing/images/user-6-87x87.jpg' %}" alt="" width="87" height="87">
-                      </div>
                       <div class="unit-body">
                         <h5 class="quote-nancy-cite">Patsy Avalos de Leon</h5>
                         <p class="quote-nancy-status"></p>
@@ -610,57 +630,14 @@
         </div>
       </section>
       <!-- 7 Years of Following The Dream-->
-      <section class="section section-md bg-default">
-        <div class="container">
-          <h3>Escápate un momento</h3>
-          <div class="row row-30 justify-content-center" data-lightgallery="group">
-            <div class="col-md-6 col-lg-5 col-xl-4 col-8">
-              <!-- Thumbnail-info-->
-              <article class="thumbnail-info"><img src="{% static 'core/landing/images/post-10-370x307.jpg' %}" alt="" width="370" height="303" />
-                <div class="thumbnail-info-figure">
-                  <div class="counter-classic">
-                    <div class="counter-classic-number"><span class="counter">32+</span>
-                    </div>
-                    <div class="info-description">+ de 32 Destinos</div>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-5 col-xl-4 col-8">
-              <!-- Thumbnail-info-->
-              <article class="thumbnail-info"><img src="{% static 'core/landing/images/post-10-370x307.jpg' %}" alt="" width="370" height="303" />
-                <div class="thumbnail-info-figure">
-                  <div class="counter-classic">
-                    <div class="counter-classic-number"><span class="counter">500</span><span class="symbol">+</span>
-                    </div>
-                    <div class="info-description">Viajeros felices</div>
-                  </div>
-                </div>
-              </article>
-            </div>
-            <div class="col-md-6 col-lg-5 col-xl-4 col-8">
-              <!-- Thumbnail-info-->
-              <article class="thumbnail-info"><img src="{% static 'core/landing/images/post-10-370x307.jpg' %}" alt="" width="370" height="303" />
-                <div class="thumbnail-info-figure">
-                  <div class="counter-classic">
-                    <div class="counter-classic-number"><span class="counter">1000</span>
-                    </div>
-                    <div class="info-description">Posibilidades de aventuras</div>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
       <!--Sign up form 25% Discoung-->
       <section class="section section-sm bg-default text-center">
-        <div class="parallax-container parallax_2" data-parallax-img="{% static 'core/landing/images/parallax-2-1920x850.jpg' %}">
+        <div class="parallax-container parallax_2" data-parallax-img="{% static 'core/landing/images/ni/contact.jpeg' %}">
           <div class="parallax-content  section-xl section-inset-custom-1 context-dark bg-overlay-2-21">
-            <div class="container">
-              <h2 class="oh"><span class="d-inline-block wow slideInDown">Suscríbete y Obten 25% de Descuento</span></h2>
-              <p class="text-width-medium text-spacing-75 wow fadeInLeft" data-wow-delay=".1s">Fermentum dui faucibus in ornare. Sed faucibus turpis in eu mi.</p>
-              <!-- RD Mailform-->
+            <div class="container content-intro-header">
+              <h2 class="oh"><span class="d-inline-block wow slideInDown">¡Ponte en contacto!</span></h2>
+              <p class="text-width-medium text-spacing-75 wow fadeInLeft" data-wow-delay=".1s">Estaremos encantados de ayudarte.</p>
+              <!-- RD Mailform--
               <form class="rd-form rd-mailform rd-form-inline oh-desktop" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
                 <div class="form-wrap wow slideInUp">
                   <input class="form-input" id="subscribe-form-3-email" type="email" name="email" data-constraints="@Email @Required" />
@@ -668,6 +645,26 @@
                 </div>
                 <div class="form-button wow slideInRight">
                   <button class="button button-primary" type="submit">Subscribirse</button>
+                </div>-->
+                <div class="content-contact  redes-container ">
+              
+                  <div class="row redes-card">
+                    <div class="redes-whats col-md-4"><a class="link-hover-font" href="www.facebook.com" target="_blank">Whatsapp</a></div>
+                    <div class="redes-msn col-md-4"><a class="link-hover-font"  href="www.facebook.com" target="_blank">Messenger</a></div>
+                    <div class="redes-insta col-md-4"><a class="link-hover-font"  href="www.facebook.com" target="_blank">Instagram</a></div>
+                  </div>
+                  <div style="margin:0" class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                      <div class="row">
+                        <div class="redes-whats col-md-6"><a class="link-hover-font" href="www.facebook.com" target="_blank">
+                          <i class="fa fa-envelope" aria-hidden="true"></i></a></div>
+                        <div class="redes-msn col-md-6"><a class="link-hover-font" href="www.facebook.com" target="_blank">
+                          <i class="fa fa-phone" aria-hidden="true"></i></a></div>
+                      </div>
+                    </div>
+                    <div class="col-md-4"></div>
+                  </div>
                 </div>
               </form>
             </div>
@@ -702,59 +699,9 @@
       <!--	Instagrram wondertour-->
       <section class="section section-sm section-top-0 section-fluid section-relative bg-gray-4">
         <div class="container-fluid">
-          <h6 class="gallery-title">Nuestro Instagram</h6>
+          <h6 class="gallery-title">Una Ventana a Nuestro Instagram</h6>
           <!-- Owl Carousel-->
-          <div class="owl-carousel owl-classic owl-dots-secondary" data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="4" data-xl-items="5" data-xxl-items="6" data-stage-padding="15" data-xxl-stage-padding="0" data-margin="30" data-autoplay="true" data-nav="true" data-dots="true">
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="{% static 'core/landing/images/gallery-image-1-270x195.jpg' %}" alt="" width="270" height="195" />
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="{% static 'core/landing/images/gallery-image-1-1200x800-original.jpg' %}" data-lightgallery="item"><img src="{% static 'core/landing/images/gallery-image-1-270x195.jpg' %}" alt="" width="270" height="195" /></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="{% static 'core/landing/images/gallery-image-2-270x195.jpg' %}" alt="" width="270" height="195" />
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="{% static 'core/landing/images/gallery-image-2-1200x800-original.jpg' %}" data-lightgallery="item"><img src="{% static 'core/landing/images/gallery-image-2-270x195.jpg' %}" alt="" width="270" height="195" /></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="{% static 'core/landing/images/gallery-image-3-270x195.jpg' %}" alt="" width="270" height="195" />
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="{% static 'core/landing/images/gallery-image-3-1200x800-original.jpg' %}" data-lightgallery="item"><img src="{% static 'core/landing/images/gallery-image-3-270x195.jpg' %}" alt="" width="270" height="195" /></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="{% static 'core/landing/images/gallery-image-4-270x195.jpg' %}" alt="" width="270" height="195" />
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="{% static 'core/landing/images/gallery-image-4-1200x800-original.jpg' %}" data-lightgallery="item"><img src="{% static 'core/landing/images/gallery-image-4-270x195.jpg' %}" alt="" width="270" height="195" /></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="{% static 'core/landing/images/gallery-image-5-270x195.jpg' %}" alt="" width="270" height="195" />
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="{% static 'core/landing/images/gallery-image-5-1200x800-original.jpg' %}" data-lightgallery="item"><img src="{% static 'core/landing/images/gallery-image-5-270x195.jpg' %}" alt="" width="270" height="195" /></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="{% static 'core/landing/images/gallery-image-6-270x195.jpg' %}" alt="" width="270" height="195" />
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="{% static 'core/landing/images/gallery-image-6-1200x800-original.jpg' %}" data-lightgallery="item"><img src="{% static 'core/landing/images/gallery-image-6-270x195.jpg' %}" alt="" width="270" height="195" /></a>
-              </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-              <div class="thumbnail-mary-figure"><img src="{% static 'core/landing/images/gallery-image-7-270x195.jpg' %}" alt="" width="270" height="195" />
-              </div>
-              <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="{% static 'core/landing/images/gallery-image-7-1200x800-original.jpg' %}" data-lightgallery="item"><img src="{% static 'core/landing/images/gallery-image-7-270x195.jpg' %}" alt="" width="270" height="195" /></a>
-              </div>
-            </article>
-          </div>
+          <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://cdn.lightwidget.com/widgets/fdb381f22c105f56a22a6e0c0dec8fbf.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
         </div>
       </section>
       <!-- Page Footer-->
@@ -846,7 +793,7 @@
               </div>
               <div class="col-sm-6 col-md-4 order-sm-first">
                 <!-- Rights-->
-                <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span> <span>Wonder Tour</span>. All rights reserved<span>.</span>
+                <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span> <span>FTMuack</span>. All rights reserved<span>.</span>
                 </p>
               </div>
               <div class="col-sm-6 col-md-4 text-md-right">

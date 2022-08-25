@@ -22,6 +22,8 @@ $('.slideshow-left').slick({
   infinite: true,
   dots: true,
   speed: 1000,
+  autoplay: true,
+  autoplaySpeed: 1000,
   cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)'
 }).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
   
@@ -93,11 +95,15 @@ function sliderHandlerPrev () {
 
 }
 // Finish slider
+let count = 0;
 function sliderHandlerNext () {
+  count++
+  if (count == 1) {
     activateSlider(false)
     activateIntro(false)
     setOverflowHidden(false)
     activateAllSections(true)
-    
+  }
 }
+
 

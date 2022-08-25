@@ -126,16 +126,16 @@
 .m-fadeOut {
   visibility: hidden!important;
   opacity: 0!important;
-  transition: visibility 3s linear 2s, opacity 3s;
+  transition: visibility 2s linear 2s, opacity 2s;
 }
 .m-fadeIn {
   visibility: visible!important;
   opacity: 1!important;
-  transition: visibility 0s ease-in 0s, opacity 3s;
+  transition: visibility 0s ease-in 0s, opacity 2s;
 }
 #IndexSlider {
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
+  visibility: visible;
 }
 
 
