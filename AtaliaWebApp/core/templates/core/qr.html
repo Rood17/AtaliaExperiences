@@ -93,13 +93,13 @@
   <section id="footer">
     <div>
       <div class=" row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4 row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 row">
           <div class="col-md-4 "><a href="www.facebook.com" target="_blank"><img class="links-hover" src="{% static 'core/landing/images/redes/ni/Facebook_w.png' %}" /></a></div>
           <div class="col-md-4"><a href="www.facebook.com" target="_blank"><img class="links-hover" src="{% static 'core/landing/images/redes/ni/Instagram_w.png' %}" /></a></div>
           <div class="col-md-4 "><a href="www.facebook.com" target="_blank"><img class="links-hover" src="{% static 'core/landing/images/redes/ni/Pinterest_w.png' %}" /></a></div>
         </div>
-        <div class="col-md-4"></div>
+        <div class="col-md-2"></div>
       </div>
     </div>
   </section>
@@ -111,12 +111,16 @@
   <script>
     const bodyQr = document.getElementById("qrBody");
     const rombo = document.getElementById("rombo");
+    const carousel = document.getElementById("carouselExampleCaptions")
 
     console.log(bodyQr)
     //setAutoHeight(bodyQr);
     centerElementByMargin(rombo);
     centerElementByMargin(rombo2);
     centerElementByMargin(rombo3);
+    
+    centerInThird(carousel)
+    
 
   </script>
 </body>

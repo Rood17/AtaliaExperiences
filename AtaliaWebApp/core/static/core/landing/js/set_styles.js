@@ -39,3 +39,11 @@ function centerVerticalElem(element){
     element.style.marginTop = center + px;
     console.log(center)
 }
+
+function centerInThird (element) {
+    center = $(windowsHeight2 / 3) - $(element).height();
+    center < 0 ? center *= -1 : null;
+    console.log(" center : " + center)
+    element.style.marginTop = center + px2;
+    console.log(center)
+}
