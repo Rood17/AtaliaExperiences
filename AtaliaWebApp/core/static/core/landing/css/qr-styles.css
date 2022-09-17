@@ -1,0 +1,84 @@
+#logoHeader {
+    margin: 5% auto!important;
+    
+}
+.qrlogo {
+    text-align: end;
+}
+body {
+    overflow: auto!important;
+    background-color:black;
+}
+.test {
+    float: left;
+    margin: 30% 25%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 237px;
+    border-color: #DF7C00 #EFA100 #004899 #498F9B;
+    -webkit-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    transform: rotate(315deg);
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+}
+		
+.kwadrat2
+{
+    width: 100%;
+    height: 830px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.trojkat2
+{
+position: relative;
+    overflow: hidden;
+    transform: rotate(45deg) skew(10deg,10deg);
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+    width: 350px;
+    height: 350px;
+    margin: 25% 0 0 23%;
+}
+.trojkat_bg2
+{
+	position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  z-index: -1;
+  background: url(https://picsum.photos/300/300/?random);
+  background-size: 100%;
+  background-position: center top;
+  transform: skew(-10deg,-10deg) rotate(-45deg) ;
+  transition: .3s;
+}
+
+.carousel-inner {
+    height: 830px;
+}
+
+.trojkat_bg2:hover{ background-size: 90%; }
+
+.carousel-control-prev, .carousel-control-next {
+    color:black!important;
+    background-color: whitesmoke;
+    width: 7%!important;
+    background: #878789;
+}
+#footer {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .carousel-caption {
+    bottom: 50%!important;
+  }

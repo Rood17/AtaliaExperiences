@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% load static %}
+  <title>ATALIA | Travel Experiences</title>
+
+  <!-- Stylesheets-->
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
+  
+  <link rel="stylesheet" href="{% static 'core/landing/css/fonts.css' %}">
+  <link rel="stylesheet" href="{% static 'core/landing/css/style.css' %}" />
+  <link rel="stylesheet" href="{% static 'core/landing/css/intro_styles.css' %}" />
+  <link rel="stylesheet" href="{% static 'core/landing/css/qr-styles.css' %}">
+  <link rel="stylesheet" href="{% static 'core/landing/css/bootstrap.css' %}">
+
+</head>
+
+<body id="qrBody">
+  <section id="header">
+    <div class="rd-navbar-aside-outer">
+      <!--video autoplay muted id="welcomeVideo" onended="">
+          <source id="" src="/intro_videos/linear-1.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video-->
+      <div id="logoHeader" class="content_intro_header row">
+        <div class="qrlogo col-md-4">
+            <img src="{% static 'core/landing/images/logos/logo_trans_1.png' %}" />
+        </div>
+        <div id="" class="logo-l-header content_intro_subtext col-md-8">
+            <img src="{% static 'core/landing/images/logos/logo_trans_2.png' %}" />
+        </div>
+
+        <div class="welcome-txt row">
+          <div class="col-md-6">
+            {% include 'core/components/auto_type.html' %}
+          </div>
+          <div class="col-md-6">
+            <p class="slogan-head">Travel Adviser</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="content">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="kwadrat2">
+              <div id="rombo" class="trojkat2">
+                <div class="trojkat_bg2"></div>
+              </div>
+            </div>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Primer Título</h5>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="kwadrat2">
+              <div id="rombo2" class="trojkat2">
+                <div class="trojkat_bg2"></div>
+              </div>
+            </div>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Segundo Título</h5>
+            <p></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="kwadrat2">
+              <div id="rombo3" class="trojkat2">
+                <div class="trojkat_bg2"></div>
+              </div>
+            </div>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Tercer Título</h5>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </section>
+  <section id="footer">
+    <div>
+      <div class=" row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 row">
+          <div class="col-md-4 "><a href="www.facebook.com" target="_blank"><img class="links-hover" src="{% static 'core/landing/images/redes/ni/Facebook_w.png' %}" /></a></div>
+          <div class="col-md-4"><a href="www.facebook.com" target="_blank"><img class="links-hover" src="{% static 'core/landing/images/redes/ni/Instagram_w.png' %}" /></a></div>
+          <div class="col-md-4 "><a href="www.facebook.com" target="_blank"><img class="links-hover" src="{% static 'core/landing/images/redes/ni/Pinterest_w.png' %}" /></a></div>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.6.1.slim.min.js" integrity="sha256-w8CvhFs7iHNVUtnSP0YKEg00p9Ih13rlL9zGqvLdePA=" crossorigin="anonymous"></script>
+  <script src="{% static 'core/landing/js/set_styles.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <script>
+    const bodyQr = document.getElementById("qrBody");
+    const rombo = document.getElementById("rombo");
+
+    console.log(bodyQr)
+    setAutoHeight(bodyQr);
+    centerElementByMargin(rombo);
+    centerElementByMargin(rombo2);
+    centerElementByMargin(rombo3);
+
+  </script>
+</body>
+
+</html>

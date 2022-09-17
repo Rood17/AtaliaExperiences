@@ -1,19 +1,13 @@
 /* Ser inner height max **/
-async function setAutoHeight(element, isHeader){
+const windowsHeight2 = window.innerHeight;
+const windowWidth2 = window.innerWidth;
+const px2 = "px"
 
-    element.style.height = windowsHeight + px;
-    var isREADY = await setIntroFooter().then((response) => {
-        
-        if (response) $(".preloader").addClass('loaded');
-    })
+function setAutoHeight(element){
     
-    if (isHeader) {
-
-        var eh = windowsHeight * .27;
-        logoHeader.style.marginTop = eh + px;
-        logoHeader.style.marginBottom = eh + px;
-    }
-    console.log("estamos ajustando height : " + windowsHeight)
+    element.style.height = windowsHeight2 + px2;
+    AutoHReady = true;
+    console.log("estamos ajustando height : " + windowsHeight2)
 }
 
 function setElementDisplay (element, flag){
@@ -26,18 +20,17 @@ function setElementDisplay (element, flag){
     }
 }
 
-async function  setIntroFooter (){
+function setIntroFooter(){
     var ih = introFooter.style.height = introFooterHeight + px;
-    infHeight = windowsHeight;
+    infHeight = windowsHeight - introFooterHeight;
+    console.log("infHeight : " + infHeight)
+    console.log("introFooter : " + introFooter)
     introFooter.style.top = infHeight + px;
-    introFooter.style.display = 'none';
-    
-    return  true;
 }
 
 function centerElementByMargin(element){
-    center = (windowWidth / 2) - $(element).width() /2;
-    element.style.marginLeft = center + px;
+    center = (windowWidth2 / 2) - $(element).width() /2;
+    element.style.marginLeft = center + px2;
     console.log(center)
 }
 

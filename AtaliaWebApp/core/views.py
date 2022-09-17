@@ -7,5 +7,8 @@ def coming_soon(request):
 def index(request):
     return render(request, 'core/index.html')
 
+def qr(request):
+    return render(request, 'core/qr.html')
+
 def prueba(request):
     return render(request, 'core/components/auto_type.html')
