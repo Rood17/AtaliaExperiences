@@ -47,3 +47,27 @@ function centerInThird (element) {
     element.style.marginTop = center + px2;
     console.log(center)
 }
+
+function qrSettings () {
+    const carousel = document.getElementById("carouselExampleCaptions")
+    const collection = document.getElementsByClassName("kwadrat2");
+    const collection2 = document.getElementsByClassName("trojkat2");
+    
+    var hAltitud = windowsHeight2 / 1.8;
+
+    var resultHeight = hAltitud * 2;
+
+    // tamaño
+    for ( var i = 0; i < collection2.length; i++){
+        var center = (windowWidth2 / 2) - $(collection2[i]).width() /1.5;
+        collection2[i].style.height = hAltitud + px2;
+        collection2[i].style.width = hAltitud + px2;
+        collection2[i].style.marginLeft = center + px2;
+    }
+
+    carousel.style.height = resultHeight + px2;
+    for ( var i = 0; i < collection.length; i++){
+        collection[i].style.height = resultHeight + px2;
+    }
+
+}
