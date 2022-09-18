@@ -54,9 +54,9 @@ function qrSettings () {
     const collection2 = document.getElementsByClassName("trojkat2");
     const innerCarousel = document.getElementById("innerCarousel");
     
-    var hAltitud = windowsHeight2 / 2;
+    var hAltitud = windowsHeight2 / 2.5;
 
-    var resultHeight = hAltitud * 2.5;
+    var resultHeight = hAltitud * 2.2;
 
     // tamaño
     for ( var i = 0; i < collection2.length; i++){
