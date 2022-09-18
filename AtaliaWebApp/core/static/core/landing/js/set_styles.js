@@ -76,3 +76,32 @@ function qrSettings () {
     }
 
 }
+
+function centerAll (){
+    const centerMargin = document.getElementsByClassName("centerMargin");
+    
+    for ( var i = 0; i < centerMargin.length; i++){
+        
+        var center = (windowWidth2 / 2) - $(centerMargin[i]).width() /2;
+        centerMargin[i].style.marginLeft = center + px2;
+    }
+
+}
+
+function setSliderRespExperiences() {
+    const sliderResp1 = document.getElementById("sliderResp1");
+    const sliderResp2 = document.getElementById("sliderResp2");
+    const innerRespEx = document.getElementById("innerRespEx");
+
+
+    innerRespEx.style.height = ($(sliderResp1).height() + $(sliderResp2).height() + 20) + px2
+    console.log("center **** " + innerRespEx.style.height)
+}
+
+function resizeResp () {
+    if (windowWidth2 < 728 )
+    {
+        centerAll ()
+        setSliderRespExperiences()
+    }
+}

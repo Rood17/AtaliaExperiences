@@ -57,6 +57,7 @@ window.onload= function () {
     // headerOceanVideo
     //loadDoc()
     autoType()
+    
 }
 
 function setOverflowHidden( flag ){

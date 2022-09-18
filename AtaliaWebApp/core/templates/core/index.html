@@ -40,7 +40,7 @@
 
 </head>
 
-<body id="Body">
+<body onresize="resizeResp()" id="Body">
   <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="{% static 'core/landing/images/ie8-panel/warning_bar_0000_us.jpg' %}" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
   <div class="preloader">
     <div class="preloader-body">
@@ -182,7 +182,92 @@
         </div>
         <div class="rd-navbar-wrap">
           <nav id="navHead" class="rd-navbar rd-navbar-corporate" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="106px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-            <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1 toggle-original" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+            <div onclick="$('#exampleModal').modal('show')" data-bs-target="#exampleModal" class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1 toggle-original" data-rd-navbar-toggle=".rd-navbar-collapse">
+            <span></span></div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="" id="exampleModalLabel">ATALIA | Experiences</h5>
+                    <button type="button" class="btn-close" onclick="$('#exampleModal').modal('hide')" ></button>
+                  </div>
+                  <div class="modal-body">
+
+
+                    <ul class="rd-navbar-nav">
+                      <li class="rd-nav-item active"><a class="rd-nav-link" href="index.html">Home</a>
+                      </li>
+                      <li class="rd-nav-item rd-navbar--has-dropdown rd-navbar-submenu"><a class="rd-nav-link" href="about.html">Acerca</a><span class="rd-navbar-submenu-toggle"></span>
+                        <!-- RD Navbar Dropdown-->
+                        <ul class="rd-menu rd-navbar-dropdown rd-navbar-open-right">
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="our-team.html">Nosotros</a></li>
+                        </ul>
+                      </li>
+                      <!--li class="rd-nav-item rd-navbar--has-dropdown rd-navbar-submenu"><a class="rd-nav-link" href="our-tours.html">Tours</a><span class="rd-navbar-submenu-toggle"></span>
+                        <!-- RD Navbar Dropdown--
+                        <ul class="rd-menu rd-navbar-dropdown rd-navbar-open-right">
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="single-tour.html">Tours Culturales</a></li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="single-tour.html">Tours Naturales</a></li>
+                          <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="single-tour.html">Tours Aventura</a></li>
+                        </ul>
+                      </li>-->
+                      <li class="rd-nav-item rd-navbar--has-megamenu rd-navbar-submenu"><a class="rd-nav-link" href="#">Experiencias</a><span class="rd-navbar-submenu-toggle"></span>
+                        <!-- RD Navbar Megamenu-->
+                        <ul class="rd-menu rd-navbar-megamenu rd-navbar-open-right">
+                          <!--li class="rd-megamenu-item">
+                            <div>
+                              <h5 class="rd-megamenu-title">Págs.</h5>
+                              <ul class="rd-megamenu-list">
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="services.html">Acerca</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="testimonials.html">Nosotros</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="404-page.html">Contácto</a></li>
+                                <li class="rd-megamenu-list-item"><a target="_blank" class="rd-megamenu-list-link" href="https://www.instagram.com/ataliaexperiences/">Instagram</a></li>
+                                <li class="rd-megamenu-list-item"><a target="_blank" class="fa fa-facebook rd-megamenu-list-link" href="https://www.facebook.com/AtaliaExperiences/">Facebook</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="coming-soon.html">Twitter</a></li>
+                              </ul>
+                            </div>
+                          </li-->
+                          <li class="rd-megamenu-item">
+                            <div>
+                              <h5 class="rd-megamenu-title">Experiencias</h5>
+                              <ul class="rd-megamenu-list">
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="typography.html">Navega</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="buttons.html">Degusta</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="forms.html">Diviértete</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="tabs-and-accordions.html">Traslados / Transporte</a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="counters.html"><span style="color:#01b3a7">PETICIONES ESPECIALES</span></a></li>
+                                <li class="rd-megamenu-list-item"><a class="rd-megamenu-list-link" href="icons-with-text.html">Celebra</a></li>
+                              </ul>
+                            </div>
+                          </li>
+  
+                          <li class="rd-megamenu-item rd-megamenu-carousel">
+                            <div>
+                              <h5 class="rd-megamenu-title">Tours</h5>
+                              <!-- Owl Carousel-->
+                              <ul class="rd-megamenu-list">
+                              <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="single-tour.html">Tours Culturales</a></li>
+                              <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="single-tour.html">Tours Naturales</a></li>
+                              <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="single-tour.html">Tours Aventura</a></li>
+                            </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="rd-nav-item"><a class="rd-nav-link" href="contact-us.html">CONTACTO</a>
+                      </li>
+                      
+                    </ul>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onclick="$('#exampleModal').modal('hide')">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div class="rd-navbar-main-outer">
               <div class="rd-navbar-main">
                 <div class="rd-navbar-nav-wrap toggle-original-elements">
@@ -272,7 +357,7 @@
         <p id="sectionChange">A tu Gusto</p>
       </div>
 
-      <section class="section section-lg section-top-1 bg-gray-4">
+      <section id="experiencias" class="section section-lg section-top-1 bg-gray-4">
 
         <div class="container offset-negative-1">
           <div class="box-categories cta-box-wrap">
@@ -327,6 +412,10 @@
           </div>
           <!-- Owl Carousel-->
         </div>
+      </section>
+
+      <section id="experienciasResp">
+        {% include 'core/components/experiencias_resp.html' %}
       </section>
       <!-- Discover New Horizons-->
       <section class="section section-sm section-first bg-default text-md-left">
